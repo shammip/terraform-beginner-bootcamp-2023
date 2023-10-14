@@ -70,7 +70,8 @@ Generated AWS CLI credentials from IAM User. Checked if credentials were configu
 Terraform Console lists Terraform commands using: `terraform`. 
 - Run `terraform init` to download provider binaries, at project start. 
 - Run `terraform plan` to display changes.
-- Run  `terraform apply` to apply changes, with prompting or run  `terraform apply --auto-approve` to apply changes, without prompting. 
+- Run  `terraform apply` to apply changes, with prompting or run `terraform apply --auto-approve`, without prompting. 
+- Run  `terraform destroy` to destroy resources, with prompting or run `terraform destroy --auto-approve`, without prompting. 
 
 Terraform Lock File, `.terraform.lock.hcl`, has providers or modulues locked versioning and it is **committed** to the Version Control System (GitHub).
 
