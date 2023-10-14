@@ -72,12 +72,18 @@ Terraform Console lists Terraform commands using: `terraform`.
 - Run `terraform plan` to display changes.
 - Run  `terraform apply` to apply changes, with prompting or run `terraform apply --auto-approve`, without prompting. 
 - Run  `terraform destroy` to destroy resources, with prompting or run `terraform destroy --auto-approve`, without prompting. 
+- Run `terraform login`, type `p` to generate a website that will provide the token, copy token, type `q` to quit and paste token.
+    - If `terraform login` token doesn't work, manually generate a token from `https://app.terraform.io/app/settings/tokens?source=terraform-login`, then create file using `touch /home/gitpod/.terraform.d/credentials.tfrc.json` and open file using `open /home/gitpod/.terraform.d/credentials.tfrc.json` and enter this code and replace with token:
+    ```json
+    {
+        "credentials": {
+            "app.terraform.io": {
+                "token": "YOUR-TERRAFORM-CLOUD-TOKEN"
+            }
+        }
+    }
+    ```
 
 Terraform Lock File, `.terraform.lock.hcl`, has providers or modulues locked versioning and it is **committed** to the Version Control System (GitHub).
 
 Terraform State File, `.terraform.tfstate`, has details regarding infrastructure's current state and it is **not committed** to Version Control System (GitHub). The previous version of the state file is `.terraform.tfstate.backup`.
-
-
-
-
-
